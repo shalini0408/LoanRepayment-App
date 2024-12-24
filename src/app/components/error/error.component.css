@@ -1,0 +1,54 @@
+.logo{
+    
+   margin-left: 3vw;
+   margin-top: 3vw;
+   padding-bottom: 10vw;
+   width: 80%;
+    max-width: 350px;
+    height: auto;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    height: 15vh;
+    position: relative;
+}
+
+.button {
+    background-color: #fbba20; 
+    border: none;
+    color: #42145f;
+    align-self: center;
+    align-items: center;
+    padding: 2vh 2vh;
+    margin-left: 3vw;
+    text-align: center;
+    display: inline-block;
+    font-size: 3.5vh;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.second {
+    background-color: white; 
+    align-self: center;
+    border: none;
+    color: #42145f;
+    align-self: center;
+    align-items: center;
+    padding: 3vh 3vh;
+    padding-top: 3vw;
+    margin-left: 3vw;
+    text-align: center;
+    display: inline-block;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 1.75em;
+
+}

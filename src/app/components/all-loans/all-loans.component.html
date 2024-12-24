@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <p class='header'>Savings accounts</p>
+  <div  class="cards2">
+    
+    <div *ngFor="let item of accountInformation; index as i;">
+      <div class="savingsAcc">
+        <div class="card">
+          <figure class="card__figure">
+            <img src="../../../assets/natwestlogo.png" class="card__figure--logo"/>
+          </figure>
+          <div class="card__reader">
+            <div class="card__reader--risk card__reader--risk-one"></div>
+            <div class="card__reader--risk card__reader--risk-two"></div>
+            <div class="card__reader--risk card__reader--risk-three"></div>
+            <div class="card__reader--risk card__reader--risk-four"></div>
+          </div>
+          <a [routerLink]="['/dashboard/accountDetails',item.accno]"class="card__number">{{item.accno}}</a>
+          <div class="card__dates">
+            <span class="card__dates--first">09/{{current_date.getFullYear()}}</span>
+            <span class="card__dates--second">09/{{current_date.getFullYear()+3}}</span>
+          </div>
+          <p class="card__name">XXXX-XXXX-XXXXXX<p>
+              <div class="card__flag">
+                <div class="card__flag--globe"></div>
+                <div class="card__flag--red"></div>
+                <div class="card__flag--yellow"></div>
+              </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div>
+    <p class='header'>All Loan Details</p>
+    <div class="table1">
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">S.no</th>
+            <th scope="col">Account Number</th>
+            <th scope="col">Loan Amount</th>
+            <th scope="col">Category</th>
+            <th scope="col">Tenure</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let loan of loaninformation; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>
+              {{loan.loanaccno}}
+            </td>
+            <td>{{loan.loan_amount |currency:'INR'}}</td>
+            <td>{{loan.category }}</td>
+            <td>{{loan.tenure }}</td>
+            <td><button style="color: black;" class='buttonTHree' mat-button [routerLink]="['./loandetails',loan.loanaccno]">Details</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

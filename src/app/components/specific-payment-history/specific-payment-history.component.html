@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+    <div>
+        <div class="specificpaymentdetails">
+    <mat-card>
+    <mat-card-header class="header">
+      <mat-card-title class="icon" *ngIf="final.payment_status==='failed'"><mat-icon style="color:#FF0000">block</mat-icon></mat-card-title>
+      <mat-card-title class="icon" *ngIf="final.payment_status==='success'"><mat-icon style="color:green">check_circle_outline</mat-icon></mat-card-title>
+        <mat-card-title >Payment {{final.payment_status}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-subtitle class="subtitle">We've received your {{-emi.emi_amount+emi.remaining_amount}} payment, Alexander</mat-card-subtitle>
+    <mat-divider></mat-divider>
+    <br />
+    <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Loan Id</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{final.loanaccno}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Customer Id</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{final.custid}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Transaction Id</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{final.transaction_no}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Timestamp</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{final.time_payment_atempted| date: 'dd/MM/YYYY'}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Payment Status</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{final.payment_status}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Payment Amount</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{final.amountpaid|currency:'INR'}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+    <br />
+    <mat-card-content  *ngIf="final.payment_status=='success' && emi.remaining_amount!=0" >
+      <mat-slider disabled class="subtitle"
+      color="#401664"
+        min=0
+        max={{emi.remaining_amount}}
+        value={{final.amountpaid}}>
+      </mat-slider>
+    </mat-card-content>
+    <mat-grid-list cols="2" rowHeight="3vh" *ngIf="final.payment_status=='success'">
+      <mat-grid-tile>Paid</mat-grid-tile>
+      <mat-grid-tile>Remaining</mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="2" rowHeight="3vh" *ngIf="final.payment_status=='success'">
+      <mat-grid-tile>{{final.amountpaid}}</mat-grid-tile>
+      <mat-grid-tile>{{(emi.remaining_amount-final.amountpaid<0)?0:emi.remaining_amount-final.amountpaid}}</mat-grid-tile>
+    </mat-grid-list>
+</mat-card>
+</div>
+</div>
+</body>   
+  

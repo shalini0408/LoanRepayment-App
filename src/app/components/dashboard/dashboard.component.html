@@ -1,0 +1,69 @@
+<!-- <mat-toolbar >
+  <img class="logo" src="../../../assets/natwest_logo.PNG" alt="">
+  <span class="example-spacer"></span>
+  <mat-list role="list" class="menu-items">
+     <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./allLoanDetails']"></button></mat-list-item>
+    <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./allLoanDetails']">Home</button></mat-list-item>
+    <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./paymenthistory']">Payment History</button></mat-list-item>
+    <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./advancepayment']">About Us</button></mat-list-item>
+  </mat-list>
+  <span class="example-spacer"></span>
+  <mat-list-item class="menu-profile" role="listitem">
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['./profile', id]">Profile</button>
+      <button mat-menu-item (click)="onlogoutclick()">Logout</button>
+    </mat-menu></mat-list-item>
+</mat-toolbar> -->
+<div style="height: 100vh; overflow-y: hidden;">
+
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+
+      <a  (click)="sidenav.toggle()"><mat-icon class="menu-icon">menu</mat-icon></a>
+
+    </div>
+    <img class="logo" src="../../../assets/natwest_logo.PNG" alt="">
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+
+      <mat-list role="list" class="menu-items">
+        <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./allLoanDetails']"></button></mat-list-item>
+       <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./allLoanDetails']">Home</button></mat-list-item>
+       <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./paymenthistory']">Payment History</button></mat-list-item>
+       <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./savingshistory']">Savings History</button></mat-list-item>
+       <mat-list-item class="menu-items" role="listitem"><button mat-button [routerLink]="['./emicalculator']">EMI calculator</button></mat-list-item>
+      </mat-list>
+      </div>
+      <span class="example-spacer"></span>
+    <mat-list-item class="menu-profile" role="listitem" float="right">
+      <button mat-button [matMenuTriggerFor]="menu"><mat-icon>account_circle</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['./profile', id]">Profile</button>
+        <button mat-menu-item (click)="onlogoutclick()">Logout</button>
+      </mat-menu></mat-list-item>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+
+    <mat-sidenav #sidenav fxLayout="column">
+
+      <div fxLayout="column">
+
+        <a (click)="sidenav.toggle()" mat-button>Close</a>
+
+        <mat-list role="list" class="sidemenu-items">
+          
+         <mat-list-item class="sidemenu-item" role="listitem"><button mat-button [routerLink]="['./allLoanDetails']">Home</button></mat-list-item>
+         <mat-list-item class="sidemenu-item" role="listitem"><button mat-button [routerLink]="['./paymenthistory']">Payment History</button></mat-list-item>
+         <mat-list-item class="sidemenu-item" role="listitem"><button mat-button [routerLink]="['./savingshistory']">Savings History</button></mat-list-item>
+         <mat-list-item class="sidemenu-item" role="listitem"><button mat-button [routerLink]="['./emicalculator']">EMI calculator</button></mat-list-item>
+       </mat-list>
+      </div>
+      
+    </mat-sidenav>
+    <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
+

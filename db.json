@@ -1,0 +1,30 @@
+{
+    "user": [
+        {
+          "customerid": "payald",
+          "password": "123456",
+          "confirmpassword": "123456",
+          "email": "payal@gmail.com",
+          "id": 1,
+          "contact":"9973568998",
+          "Address":"RZF-28 palam colony new Delhi 110045",
+          "aadhar":"1100701234",
+          "dob":"17-06-1999",
+         "name":"PAYAL SINGH",
+         "mailingAddress":"RZF-28 palam colony new Delhi 110045"
+        },
+        {
+          "customerid": "ben123",
+          "password": "123456",
+          "confirmpassword": "123456",
+          "email": "ben@gmail.com",
+          "id": 2,
+          "contact":"885611998",
+          "Address":"RZF-28palam colony new Delhi 110045",
+          "aadhar":"701234",
+          "dob":"12-11-2001",
+          "name":"MONICA SINGH",
+          "mailingAddress":"RZF-28 palam colony new Delhi 110045"
+        }
+      ]
+}

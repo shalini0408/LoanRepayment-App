@@ -1,0 +1,119 @@
+
+
+<!-- <section class="Form">
+    <div class="container">
+<div class ="row">
+   <div class="col-lg-7">
+<form>
+    <div class="form-row">
+        <div class="col-lg-6">
+            <input  #customerid  name="customerid" formControlName="customerid" required/>
+            <div *ngIf="f['customerid'].errors?.['required']">Username cannot be empty</div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-lg-6">
+            <input matInput type="password" #password name="password" formControlName="password" required/>
+            <div *ngIf="f['password'].errors?.['required']">Username cannot be empty</div>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+</div>
+</section> -->
+
+<!-- <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->
+
+<!-- <div class="jumbotron d-flex align-items-center min-vh-100 bigbox">
+    <div class="container text-center">
+        <img src="assets/optum.png" class="image-fluid mb-3" width="250" height="81.25">
+        <form (ngSubmit)="onlogin(customerid.value,password.value)" name="loginForm" [formGroup]="loginForm" class="mx-auto">
+            <h2 class="text-center">Login</h2>
+            <div class="input-group mb-4">
+                <div class="col-sm-3 mt-4" style="display: inline-block; float: none; margin: 0 auto;">
+                    <div class="input-group-prepend ">
+                        <span class="input-group-text bg-white px-4 border-md border-right-0 rounded-0">
+                            <i class="fa fa-user fa-lg"></i>
+                        </span>
+                        
+                        <input #customerid type="text" name="customerid" formControlName="customerid" placeholder="customerid" style="font-size: medium;" class="form-control bg-white border-left-0 border-md rounded-0"  required>
+                        <div *ngIf="f['customerid'].errors?.['required']">Username cannot be empty</div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-4 ">
+                <div class="col-sm-3" style="display: inline-block; float: none; margin: 0 auto;">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-white px-4 border-md border-right-0 rounded-0">
+                            <i class="fa fa-lock fa-lg"></i>
+                        </span>
+                        <input type="password" #password name="password" formControlName="password" placeholder="Password" style="font-size: medium;" class="form-control bg-white border-left-0 border-md  rounded-0"  required>
+                        <div *ngIf="f['password'].errors?.['required']">Username cannot be empty</div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group col-sm-3 mx-auto mb-0 px-4" style="display: inline-block; float: none; margin: 0 auto;">
+                <button type="submit"  class="btn login-btn btn-block mb-4" style="height:5vh; font-size:large">Login</button>
+            </div>
+        </form>
+    </div>
+</div> -->
+<div class="header">
+
+    <img class="logo" src="../../../assets/natwest_logo.PNG" >
+    </div>
+    <div   class="main-div">
+       
+        <mat-card class="cards">
+          
+            <h1>Welcome to NatWest Online Loan Payment Facility </h1>
+           
+            <form (ngSubmit)="onlogin()" name="loginForm" [formGroup]="loginForm" fxLayoutAlign="stretch" fxLayout="column" class="login-form" >
+                <p class="alert alert-danger" *ngIf="message">{{message}}</p>
+                <mat-form-field  >
+           
+                    <mat-label>CustomerId</mat-label>
+     
+                  <input  matInput #customerid type="number" name="customerid" formControlName="customerid" required/>
+               
+                      <mat-error *ngIf="f['customerid'].errors?.['required']">Please enter the customer ID to proceed
+                      </mat-error>
+            </mat-form-field>
+    <!-- <div>
+        <a class="alink" (click)="accessForget()">Forgot Password?</a>
+    </div> -->
+                <mat-form-field >
+                    <mat-label>Password</mat-label>
+                
+                    <input matInput [type]="hide ? 'password' : 'text'" type="password" #password name="password" formControlName="password" required/> 
+            
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    <!-- <button mat-icon-button matSuffix (click)="hide =!hide"
+                 [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide">
+                 <mat-icon> {{hide ? 'visibility_off':'visibility'}}</mat-icon></button> -->
+                     <mat-error *ngIf="f['password'].errors?.['required']">Please enter Password.
+                    </mat-error>
+                  </mat-form-field> 
+              <button  mat-raised-button color="primary" type="submit" class="loginbtn">Login</button>
+                </form>
+        </mat-card>
+    </div>
+    <app-footer></app-footer>

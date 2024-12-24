@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+.classCapitalize{
+    text-transform: capitalize;
+}
+mat-grid-tile{
+    text-align: left;
+}
+.makepartialFull{
+    margin:auto;
+    width: 90%;
+    margin-top: 4vh;
+}
+.drop{
+    margin-left: 2vw;
+    width:6vw;
+}
+.loanDetails{
+    width:30vw;
+}
+.classColor {
+  color: #42145f;
+}
+.classFontColor{
+    color:#1d7b8a;
+}
+mat-grid-tile{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formAdv{
+    margin-left: 3vw;
+    width: 1vw;
+}
+.buttonTHree{
+    margin: 1vh;
+}
+mat-slider {
+    width: 30vw;
+  }
+table {
+    width: 100%;
+    margin: auto;
+}
+th{
+    color:#42145f;
+    font-size: 1.2em;
+}
+.adavBlock{
+    position: absolute;
+    margin-top: -15vh;
+}
+.mat1list{
+    width:20vw;
+}
+.chart{
+    margin-top: -57vh;
+    margin-left: 35vw;
+    width:30vw;
+}
+.chart1{
+    margin-top: -30vh;
+    margin-left: 60vw;
+    width:30vw;
+}
+.APRtABLE{
+       padding-bottom:3vh ;
+}
+.padAdv{
+    
+    margin-top: -1vh;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+}
+.exportData{
+    float:right;margin-right:4.5vw;
+    margin-top:1vh;margin-bottom: 2vh;  
+}
+.example-form-field {
+    width: 200px;
+  }
+  mat-grid-tile{
+    font-size: 1.2em;
+  }
+.aprh{
+    position: absolute;
+    margin-top: -5vh;
+    color:#42145f;
+    font-size: 1.5em;
+    margin-left: 2vw;
+}
+.aprP{
+    font-size: 1em;
+    width:50vw;
+    margin-left: 2vw;
+    padding-bottom: 2vh;
+}
+
+
+@media only screen and (max-width: 430px) {
+    mat-grid-tile{
+        font-size: 1em;
+      }
+    .table1 {
+        width: 90%;
+        margin: auto;
+        overflow: scroll;
+    }
+    .mat1list{
+        width:78vw;
+    }
+    .chr1{
+        margin-top: -10vh;
+    }
+    .chart{
+        margin-top: -10vh;
+        padding-bottom: 3vh;
+        width:95vw;
+        margin: auto;
+     }
+     .chart1{
+        margin: auto;
+        margin-left: -0.5vw;
+        padding-bottom: 5vh;
+        width:75vw;
+        
+     }
+     .loanDetails{
+        width:85vw;
+        margin: auto;
+        
+    }
+    
+    .es1{
+        margin-left: 10vw;
+    }
+    th{
+       width: 30vw;
+        font-size: 0.8em;
+    }
+    td{
+        min-width: 35vw;
+     }
+     .APRtABLE{
+        overflow: auto;
+     }
+    .exportData{
+        float:right;margin-right:25vw;
+    margin-top:3vh;margin-bottom: 2vh;    }
+    .padAdv{
+        padding-top: 5vh;
+        
+    }
+    .aprh{
+        margin-top: -3vh;
+    }
+    .aprP{
+        width:90%;
+        margin-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}

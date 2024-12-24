@@ -1,0 +1,87 @@
+table{
+    
+  width: 90%;
+  align-items: center; 
+  margin: auto;
+  text-align: center;
+  border-collapse: collapse; 
+ max-height: 80vh;
+  border-spacing: 1vh 1vh;
+  overflow: auto;
+}
+body{
+  overflow: hidden;
+}
+td.mat-cell {
+  padding: 2vh 2vh;
+}
+.table1{
+  max-height: 100vh;
+  padding-bottom: 30vh;
+  overflow: hidden;
+  overflow-y: auto;
+
+}
+.header {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  padding-left: 3vh;
+  color: #42145f;
+  font-size:2.5em;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.tableheaders {
+  color:#1d7b8a;
+  text-align: center;
+  font-size: 1em;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.buttonTHree {
+  background-color: #fbba20; 
+  border: none;
+  color: #42145f;
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vh;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.exportData{
+  float:right;margin-right:3vw;
+ bottom: 50vh;
+}
+@media only screen and (max-width: 430px) {
+  .table1{
+   
+      width: 95%;
+      margin: auto;
+      overflow: scroll;
+      font-size: small;
+      height: 100vw ;
+  }
+  .header{
+      font-size: 2em;
+  }
+  table{
+    width:120vh;
+    overflow: scroll;
+  }
+  body {
+    padding-left: 70vw;
+    width: 100vh;
+    overflow: scroll;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    height: 100vh ;
+}
+.exportData{
+  position: absolute;
+  left: 180vw;
+  top:5vh
+}
+}

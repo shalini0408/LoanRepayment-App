@@ -1,0 +1,53 @@
+.main-div {
+    padding-top:22vh;
+    width: 40vw;
+    margin: auto;
+
+}
+/* .loan h1{
+    padding-top:20vh;
+    padding-left:38vw;
+} */
+.logo{
+    width:12vw;
+   margin-left: 10vw;
+   margin-top: 1vw;
+}
+.login-form{
+    padding-left :0.7vw;
+    padding-right:0.7vw;
+}
+.alink{
+    float:right;
+    font-size:1em;
+}
+.header{
+    width:100vw;
+    height:11vh;
+    background-color:#42145F;
+}
+h1{
+    font-weight:bold;
+    padding-left:3vw;
+    font-size:1.5em;
+    font-family: Helvetica, sans-serif;
+}
+.loginbtn{
+background-color:#42145F;
+}
+
+
+@media only screen and (max-width: 430px) {
+    .main-div {
+        width: 90%;
+        overflow: scroll;
+    }
+    .logo{
+        margin-top: 1vh;
+        width:30%;
+        margin-left: 6vw;
+    }
+    .header{
+        height: 56px;
+    }
+}

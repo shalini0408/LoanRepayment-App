@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+.classCapitalize{
+    text-transform: capitalize;
+}
+
+.loanDetails{
+    width:45vw;
+}
+.classColor {
+  color: #42145f;
+}
+.classFontColor{
+    color:#1d7b8a;
+}
+mat-grid-tile{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formAdv{
+    height: 1vh;
+    
+}
+.buttonTHree{
+    margin: 1vh;
+}
+mat-slider {
+    width: 30vw;
+  }
+table {
+    width: 100%;
+    margin: auto;
+}
+th{
+    color:#42145f;
+    font-size: 1.2em;
+}
+.mat1list{
+    width:20vw;
+}
+.chart{
+    margin-top: -30vh;
+    margin-left: 55vw;
+    width:30vw;
+}
+.APRtABLE{
+       padding-bottom:3vh ;
+}
+.padAdv{
+padding-top:5vh}
+.exportData{
+    float:right;margin-right:4.5vw;
+    margin-top:1vh;margin-bottom: 2vh;  
+}
+.aprh{
+    position: absolute;
+    margin-top: -5vh;
+    color:#42145f;
+    font-size: 1.5em;
+    margin-left: 5vw;
+}
+.aprP{
+    font-size: 1em;
+    width:50vw;
+    margin-left: 5vw;
+    padding-bottom: 2vh;
+}
+.emiCalc{
+    color: #1d7b8a;
+    font-weight: 600;
+    font-size: 1.7em;
+    margin-left: 2vw;
+}
+.emiCostTable{
+    padding-bottom: 20vh;
+}
+.aprh{
+    position: absolute;
+    margin-top: -4vh;
+    color:#42145f;
+    font-size: 1.5em;
+    margin-left: 2vw;
+}
+.aprP{
+    font-size: 1em;
+    width:50vw;
+    margin-left: 2vw;
+    padding-bottom: 2vh;
+}
+@media only screen and (max-width: 430px) {
+    .table1 {
+        width: 90%;
+        margin: auto;
+        overflow: scroll;
+    }
+    .mat1list{
+        width:78vw;
+    }.emiCostTable{
+        padding-bottom: 40vh;
+    }
+    .chart{
+        padding-bottom: 3vh;
+        width:95vw;
+        margin: auto;
+     }
+     .loanDetails{
+        width:75vw;
+    }
+    .es1{
+        margin-left: 10vw;
+    }
+    th{
+       width: 30vw;
+        font-size: 0.8em;
+    }
+    td{
+        min-width: 35vw;
+     }
+     .APRtABLE{
+        overflow: auto;
+     }
+    .exportData{
+        float:right;margin-right:25vw;
+    margin-top:3vh;margin-bottom: 2vh;    }
+    .padAdv{
+        padding-top: 0vh;
+        padding-bottom: -20px;
+    }
+    .aprh{
+        margin-top: -5vh;
+    }
+    .aprP{
+        width:90%;
+        padding-bottom: 3vh;
+    }
+}

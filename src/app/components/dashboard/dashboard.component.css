@@ -1,0 +1,41 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.menu-items
+{
+  display: flex;
+  justify-content: center;
+}
+.logo{
+  justify-content: center;
+  width:12vw;
+}
+.mat-toolbar
+{
+  background-color:#42145F;
+  display: flex;
+}
+.menu-items
+{
+  color: white;
+}
+.menu-profile
+{
+  color: white;
+}
+.menu-icon {
+  margin-top: 1.5vh;
+  margin-right: 1vh;
+}
+.sidemenu-item {
+  color:#42145F;
+  
+}
+.sidemenu-items {
+  justify-content: center;
+}
+@media only screen and (max-width: 430px) {
+  .logo{
+    width:30%;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+    <div class="acccont">
+        <div class="specificpaymentdetails">
+    <mat-card>
+    <mat-card-header class="header">
+        <mat-card-title >Hello XXXX XXXX XXXX</mat-card-title>
+    </mat-card-header>
+    <mat-card-subtitle class="subtitle">Debit Card</mat-card-subtitle>
+
+    <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Account Id</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{accountNumber}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Available balance</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{balence|currency:"INR"}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>Cust Id</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{custid}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>branch_name</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{branch_name}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+      <mat-card-content class="classFontColor">
+        <mat-grid-list cols="2" rowHeight="3vh">
+          <mat-grid-tile>IFSC CODE</mat-grid-tile>
+          <mat-grid-tile style="color:black;">{{ifsc}}</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+   
+</mat-card>
+</div>
+<div class="savingsAcc">
+    <div class="card">
+      <figure class="card__figure">
+        <img src="../../../assets/natwestlogo.png" class="card__figure--logo"/>
+      </figure>
+      <div class="card__reader">
+        <div class="card__reader--risk card__reader--risk-one"></div>
+        <div class="card__reader--risk card__reader--risk-two"></div>
+        <div class="card__reader--risk card__reader--risk-three"></div>
+        <div class="card__reader--risk card__reader--risk-four"></div>
+      </div>
+      <p class="card__number">{{accountNumber}}</p>
+      <div class="card__dates">
+        <span class="card__dates--first">09/XXXX</span>
+        <span class="card__dates--second">09/XXXX</span>
+      </div>
+      <p class="card__name">XXXX-XXXX-XXXXXX<p>
+          <div class="card__flag">
+            <div class="card__flag--globe"></div>
+            <div class="card__flag--red"></div>
+            <div class="card__flag--yellow"></div>
+          </div>
+    </div>
+  </div>
+</div>
+</body>   
+  

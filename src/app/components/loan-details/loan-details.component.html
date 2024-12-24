@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div>
+    <div class="allDetails" >        
+      <mat-card class="mat-elevation-z0">
+        <div class="loanDetails">
+          <mat-card-header>
+            <mat-card-title class="classColor">Account Details</mat-card-title>
+            <mat-card-subtitle *ngIf="outStandingAmount!=0">Account status <span style="background-color: lightgreen;border-radius:10px;padding: .3vw;font-size: small;">Active</span></mat-card-subtitle>
+            <mat-card-subtitle *ngIf="outStandingAmount==0">Account status <span style="background-color:red;color:white;border-radius:10px;padding: .3vw;font-size: small;">Closed</span></mat-card-subtitle>
+          </mat-card-header>
+  
+          <mat-card-content class="classFontColor">
+            <mat-grid-list cols="2" rowHeight="3vh">
+              <mat-grid-tile>Account Number</mat-grid-tile>
+              <mat-grid-tile style="color:black;">{{accountNumber}}</mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+  
+          <mat-card-content class="classFontColor">
+            <mat-grid-list cols="2" rowHeight="3vh">
+              <mat-grid-tile>Interest</mat-grid-tile>
+              <mat-grid-tile><span style="color:black">{{interest}}% P.A</span></mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+  
+          <mat-card-content class="classFontColor">
+            <mat-grid-list cols="2" rowHeight="3vh">
+              <mat-grid-tile>Principle Amount</mat-grid-tile>
+              <mat-grid-tile><span style="color:black">{{principleAmount|currency:"INR"}}</span></mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+  
+          <mat-card-content class="classFontColor">
+            <mat-grid-list cols="2" rowHeight="3vh">
+              <mat-grid-tile>Outstanding Amount</mat-grid-tile>
+              <mat-grid-tile><span style="color:black">{{outStandingAmount|currency:"INR"}}</span></mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+  
+          <mat-card-content class="classFontColor">
+            <mat-grid-list cols="2" rowHeight="3vh">
+              <mat-grid-tile> Upcoming Payment</mat-grid-tile>
+              <mat-grid-tile><span style="color:black">{{upcommingDuedate|date}}</span></mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+  
+
+
+          <mat-card-content class="classFontColor">
+            <mat-grid-list cols="2" rowHeight="3vh">
+              <mat-grid-tile> Upcomming EMI payment</mat-grid-tile>
+              <mat-grid-tile><span style="color:black">{{upcommingEMi|currency:"INR"}}</span></mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+
+          <mat-card-content style="padding-bottom:10vh" class="classFontColor">
+            <mat-grid-list cols="2" rowHeight="3vh">
+              <mat-grid-tile> Tenure</mat-grid-tile>
+              <mat-grid-tile matTooltip="Info about the action" ><span style="color:black">{{tenure}} years *</span></mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+  
+          <mat-grid-list cols="3">
+              <button class="buttonTHree" mat-raised-button style="background-color: #42145f;color:white" (click)="accessadvancePayment()">Prepayment</button>
+            
+            </mat-grid-list>
+    
+          
+        </div>
+        <div class="chart">
+          <apx-chart
+            [series]="chartOptions.series"
+            [chart]="chartOptions.chart"
+            [dataLabels]="chartOptions.dataLabels"
+            [plotOptions]="chartOptions.plotOptions"
+            [yaxis]="chartOptions.yaxis"
+            [legend]="chartOptions.legend"
+            [fill]="chartOptions.fill"
+            [stroke]="chartOptions.stroke"
+            [tooltip]="chartOptions.tooltip"
+            [xaxis]="chartOptions.xaxis"
+            [colors]="chartOptions.colors"
+          ></apx-chart>
+        </div>
+        
+        
+    </mat-card>
+    
+    </div>
+  </div>
+
+    </body>
+    </html>
+

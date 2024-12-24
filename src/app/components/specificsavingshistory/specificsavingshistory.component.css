@@ -1,0 +1,38 @@
+mat-card{
+    width: 50%;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;  
+}
+.mat-icon {
+        transform: scale(2);
+}
+.classColor{
+    color: #42145f;
+}
+.icon{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+.header{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
+}
+.subtitle{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.mat-grid-tile{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media only screen and (max-width: 430px) {
+    mat-card{
+        margin-top: 10vh;
+        width:95%;
+    }
+}
